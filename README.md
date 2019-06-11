@@ -15,33 +15,33 @@ Since Custom URL scheme behavior has changed quite a bit in iOS 9.2 for the case
 us know if you encounter compatibility issues. Also, try removing them and using this one on its own.*
 
 ##ORIGINAL plugin
-https://github.com/ionic-team/ionic-plugin-deeplinks
+[ionic-plugin-deeplinks](https://github.com/ionic-team/ionic-plugin-deeplinks)
 
 ## VALID Universal link DOMAIN defined for Entel App Personas
-app.entel.cl
+- app.entel.cl
 
 ## VALID Universal Link paths defined for Entel App Personas
-/open
-/Entel/*
-/ul/*
+- /open
+- /Entel/*
+- /ul/*
 
 ## VALID production ready app IDs 
-cl.entel.appswlsdesa
-N4YLN8K7AT.cl.entel.appentel
+- cl.entel.appswlsdesa
+- N4YLN8K7AT.cl.entel.appentel
 
 ## VALID debug-test app IDs 
-cl.entel.appswlsdesa.debug
+- cl.entel.appswlsdesa.debug
 
 ## Configurations deployed on app.entel.cl
 Entel uses old IIS for public site. This forces a 'hardcoded' solution to serve the required files that are validated by Android/iOS when users install the app: they are served by F5 on https://app.entel.cl/.well-known/
 
 #### assetlinks.json (Android)
-Android handles valids paths from settings in AndroidManifest.xml and, because of that, assetlinks.json it's ready and do not need any changes. If more paths are needed, PLEASE update apple-app-site-association file on server.
-To enable this app in another domain (example: testapp.entel.cl) only copy this file in the respective /.well-known for that subdomain.  
+Android handles valids paths from settings in AndroidManifest.xml and, because of that, assetlinks.json is ready and do not need any changes. If more paths are needed, PLEASE update apple-app-site-association file on server.
+To enable this app in another domain (example: testapp.entel.cl) only copy this file in the respective /.well-known folder for that subdomain.  
 
 #### apple-app-site-association (iOS)
 iOS handles valid paths from this config file. Adding new paths to Universal Links requires an update/deploy to this file before trying to use in app. PLEASE, update AndroidManifest.xml with this new paths.
-To enable this app in another domain (example: testapp.entel.cl) only copy this file in the respective /.well-known for that subdomain.  
+To enable this app in another domain (example: testapp.entel.cl) only copy this file in the respective /.well-known folder for that subdomain.  
 
 ## Installation
 server-configs folder in this repository contains files required to serve only by https scheme in /.well-known folder on ALL domains. Failing to deploy in ALL domains, invalidates universal link FOR ALL DOMAINS. 
