@@ -1,0 +1,34 @@
+{
+  "name": "universallink-entel-plugin",
+  "version": "1.0.0",
+  "cordova": {
+    "id": "universallink-entel-plugin",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "description": "Universal/App Link for Entel (Ionic Deeplinks Plugin)",
+  "repository": "https://bitbucket.org/cranorve/outsystems-cordova-universallinkentel.git",
+  "keywords": [
+    "ionic",
+    "cordova",
+    "deeplink",
+    "deeplinks",
+	"universallink",
+	"universallinks",
+    "mobile",
+    "hybrid",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "dependencies": {
+    "mkpath": ">=1.0.0",
+    "xml2js": ">=0.4",
+    "node-version-compare": ">=1.0.1",
+    "plist": ">=1.2.0"
+  },
+  "author": "Max Lynch <max@ionic.io>",
+  "license": "MIT"
+}

@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>APP</title>
+</head>
+<body>
+<script>
+var userAgent = window.navigator.userAgent.toLowerCase();
+var ios		= /iphone|ipod|ipad/.test( userAgent );
+var android	= /android/.test( userAgent );
+
+	if ( android )
+       {
+		window.location = "https://play.google.com/store/apps/details?id=cl.entel.appswlsdesa";
+       }
+       else if ( ios )
+       {
+/*
+	    var now = new Date().valueOf();
+	    // Fix para enviar al usuario a la appstore a descargar la aplicación si no la encuentra
+	    setTimeout(function () 
+	    {
+	        if (new Date().valueOf() - now > 100) return;
+	        window.open("https://itunes.apple.com/cl/app/entel/id931459056", "_self");
+	    }, 500);
+*/	
+	    // Apertura de la aplicación
+	    window.open("https://itunes.apple.com/cl/app/entel/id931459056", "_self");
+       }
+       else
+       {
+    	window.location = "https://www.entel.cl/app";
+       }
+</script>
+</body></html>

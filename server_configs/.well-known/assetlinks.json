@@ -1,0 +1,23 @@
+[
+{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": 
+  {
+    "namespace": "android_app",
+    "package_name": "cl.entel.appswlsdesa.debug",
+    "sha256_cert_fingerprints":
+    ["91:89:85:DB:D2:7D:C7:C8:2E:3D:8A:69:48:A4:52:1D:50:91:E7:D4:CF:B1:91:43:D6:69:81:B3:2F:56:25:B8"]
+  }
+}
+,
+{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": 
+  {
+    "namespace": "android_app",
+    "package_name": "cl.entel.appswlsdesa",
+    "sha256_cert_fingerprints":
+    ["91:89:85:DB:D2:7D:C7:C8:2E:3D:8A:69:48:A4:52:1D:50:91:E7:D4:CF:B1:91:43:D6:69:81:B3:2F:56:25:B8"]
+  }
+}
+]
