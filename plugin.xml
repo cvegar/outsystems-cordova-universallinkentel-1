@@ -38,11 +38,12 @@
 			</feature>
 		</config-file>
 
-		<edit-config file="AndroidManifest.xml" target="/manifest/application/activity" mode="overwrite">
+		<config-file target="AndroidManifest.xml" parent="/manifest/application/activity" mode="replace">
             <intent-filter android:label="@string/launcher_name">
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+
 			<intent-filter android:autoVerify="true">
 				<action android:name="android.intent.action.VIEW" />
 				<category android:name="android.intent.category.DEFAULT" />
@@ -51,7 +52,7 @@
 				<data android:scheme="https" android:host="app.entel.cl" android:path="/Entel/*" />
 				<data android:scheme="https" android:host="app.entel.cl" android:path="/ul/*" />
 			</intent-filter>
-		</edit-config>
+		</config-file>
 
 		<source-file src="src/android/io/ionic/links/IonicDeeplink.java" target-dir="src/io/ionic/deeplink" />
 	</platform>
