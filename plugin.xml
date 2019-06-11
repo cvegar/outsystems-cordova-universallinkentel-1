@@ -43,7 +43,6 @@
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-
 			<intent-filter android:autoVerify="true">
 				<action android:name="android.intent.action.VIEW" />
 				<category android:name="android.intent.category.DEFAULT" />
@@ -52,7 +51,7 @@
 				<data android:scheme="https" android:host="app.entel.cl" android:path="/Entel/*" />
 				<data android:scheme="https" android:host="app.entel.cl" android:path="/ul/*" />
 			</intent-filter>
-		</config-file>
+		</edit-config>
 
 		<source-file src="src/android/io/ionic/links/IonicDeeplink.java" target-dir="src/io/ionic/deeplink" />
 	</platform>
