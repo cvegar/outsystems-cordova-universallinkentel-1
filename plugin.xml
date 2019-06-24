@@ -99,8 +99,7 @@
             <string>production</string>
 		</config-file>
 
-		<config-file parent="dict" target="*/Entitlements-Release.plist">
-			<key>com.apple.developer.associated-domains</key>
+		<config-file parent="com.apple.developer.associated-domains" target="*/Entitlements-Release.plist">
 			<array>
 				<string>applinks:app.entel.cl</string>
 			</array>
