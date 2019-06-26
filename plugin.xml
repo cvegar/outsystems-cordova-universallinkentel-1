@@ -9,24 +9,6 @@
 
 	<!-- android -->
 	<platform name="android">
-	<!--
-		<preference name="URL_SCHEME" default="cl.entel.appentel" />
-		<preference name="DEEPLINK_SCHEME" default="https" />
-		<preference name="DEEPLINK_HOST" default="app.entel.cl" />
-		<preference name="ANDROID_PATH_PREFIX" default="/open" />
-		-->
-<!--
-		<preference name="DEEPLINK_2_SCHEME" default="https" />
-		<preference name="DEEPLINK_2_HOST" default="app.entel.cl" />
-		<preference name="ANDROID_2_PATH_PREFIX" default="/Entel/*" />
-		
-		<preference name="DEEPLINK_3_SCHEME" default="https" />
-		<preference name="DEEPLINK_3_HOST" default="app.entel.cl" />
-		<preference name="ANDROID_3_PATH_PREFIX" default="/ul/*" />
--->		
-		<!-- <preference name="ANDROID_4_PATH_PREFIX" default="/" />
-		<preference name="ANDROID_5_PATH_PREFIX" default="/" />
-		-->
 		<js-module src="www/deeplink.js" name="deeplink">
 			<runs/>
 			<clobbers target="IonicDeeplink" />
@@ -69,11 +51,6 @@
 			<feature name="IonicDeeplinkPlugin">
 				<param name="ios-package" value="IonicDeeplinkPlugin" onload="true" />
 			</feature>
-			<!--
-			<preference name="URL_SCHEME" value="$URL_SCHEME" />
-			<preference name="DEEPLINK_SCHEME" value="$DEEPLINK_SCHEME" />
-			<preference name="DEEPLINK_HOST" value="$DEEPLINK_HOST" />
-			-->
 		</config-file>
 
 		<config-file target="*-Info.plist" parent="CFBundleURLTypes">
