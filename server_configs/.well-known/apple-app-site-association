@@ -4,7 +4,7 @@
         "details": [
             {
                  "appID": "N4YLN8K7AT.cl.entel.appentel",
-                 "paths": ["/open", "/Entel/*", "/ul/*"]
+                 "paths": [ "/open/*", "/Entel/*", "/ul/*", "/Personas/*", "/Hogar/*" ]
             }
         ]
     }
