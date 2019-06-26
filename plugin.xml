@@ -2,31 +2,13 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="ionic-plugin-deeplinks" version="1.0.20">
 	<name>Universal and Deeplink Plugin</name>
-	<description>Hardcoded universal and deep linking for Entel Personas App</description>
+	<description>Hardcoded universal and deep linking</description>
 	<license>MIT</license>
 	<keywords>universallinks</keywords>
 	<repo>https://bitbucket.org/cranorve/outsystems-cordova-universallinkentel.git</repo>
 
 	<!-- android -->
 	<platform name="android">
-	<!--
-		<preference name="URL_SCHEME" default="cl.entel.appentel" />
-		<preference name="DEEPLINK_SCHEME" default="https" />
-		<preference name="DEEPLINK_HOST" default="app.entel.cl" />
-		<preference name="ANDROID_PATH_PREFIX" default="/open" />
-		-->
-<!--
-		<preference name="DEEPLINK_2_SCHEME" default="https" />
-		<preference name="DEEPLINK_2_HOST" default="app.entel.cl" />
-		<preference name="ANDROID_2_PATH_PREFIX" default="/Entel/*" />
-		
-		<preference name="DEEPLINK_3_SCHEME" default="https" />
-		<preference name="DEEPLINK_3_HOST" default="app.entel.cl" />
-		<preference name="ANDROID_3_PATH_PREFIX" default="/ul/*" />
--->		
-		<!-- <preference name="ANDROID_4_PATH_PREFIX" default="/" />
-		<preference name="ANDROID_5_PATH_PREFIX" default="/" />
-		-->
 		<js-module src="www/deeplink.js" name="deeplink">
 			<runs/>
 			<clobbers target="IonicDeeplink" />
@@ -37,13 +19,13 @@
 				<param name="onload" value="true" />
 			</feature>
 		</config-file>
-
+<!--
 		<config-file target="AndroidManifest.xml" parent="/manifest/application/activity" mode="replace">
             <intent-filter android:label="@string/launcher_name">
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-
+-
 			<intent-filter android:autoVerify="true">
 				<action android:name="android.intent.action.VIEW" />
 				<category android:name="android.intent.category.DEFAULT" />
@@ -54,8 +36,9 @@
 				<data android:scheme="https" android:host="app.entel.cl" android:pathPrefix="/Personas" />
 				<data android:scheme="https" android:host="app.entel.cl" android:pathPrefix="/Hogar" />
 			</intent-filter>
-		</config-file>
 
+		</config-file>
+-->
 		<source-file src="src/android/io/ionic/links/IonicDeeplink.java" target-dir="src/io/ionic/deeplink" />
 	</platform>
 
@@ -69,11 +52,6 @@
 			<feature name="IonicDeeplinkPlugin">
 				<param name="ios-package" value="IonicDeeplinkPlugin" onload="true" />
 			</feature>
-			<!--
-			<preference name="URL_SCHEME" value="$URL_SCHEME" />
-			<preference name="DEEPLINK_SCHEME" value="$DEEPLINK_SCHEME" />
-			<preference name="DEEPLINK_HOST" value="$DEEPLINK_HOST" />
-			-->
 		</config-file>
 
 		<config-file target="*-Info.plist" parent="CFBundleURLTypes">
@@ -86,7 +64,7 @@
 				</dict>
 			</array>
 		</config-file>
-
+<!--
 		<config-file parent="aps-environment" target="*/Entitlements-Debug.plist">
             <string>development</string>
 		</config-file>
@@ -106,7 +84,7 @@
 				<string>applinks:app.entel.cl</string>
 			</array>
 		</config-file>
-
+-->
 		<source-file src="src/ios/AppDelegate+IonicDeeplink.m" />
 		<header-file src="src/ios/IonicDeeplinkPlugin.h" />
 		<source-file src="src/ios/IonicDeeplinkPlugin.m" />
