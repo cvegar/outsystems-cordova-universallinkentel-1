@@ -49,8 +49,10 @@
 				<category android:name="android.intent.category.DEFAULT" />
 				<category android:name="android.intent.category.BROWSABLE" />
 				<data android:scheme="https" android:host="app.entel.cl" android:pathPrefix="/open" />
-				<data android:scheme="https" android:host="app.entel.cl" android:path="/Entel/*" />
-				<data android:scheme="https" android:host="app.entel.cl" android:path="/ul/*" />
+				<data android:scheme="https" android:host="app.entel.cl" android:pathPrefix="/Entel" />
+				<data android:scheme="https" android:host="app.entel.cl" android:pathPrefix="/ul" />
+				<data android:scheme="https" android:host="app.entel.cl" android:pathPrefix="/Personas" />
+				<data android:scheme="https" android:host="app.entel.cl" android:pathPrefix="/Hogar" />
 			</intent-filter>
 		</config-file>
 
