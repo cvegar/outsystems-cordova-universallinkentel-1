@@ -20,10 +20,6 @@
 			</feature>
 		</config-file>
 
-		<edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
-			<application android:usesCleartextTraffic="true" />
-		</edit-config>		
-
 		<config-file target="AndroidManifest.xml" parent="/manifest/application/activity" mode="replace">
             <intent-filter android:label="@string/launcher_name">
                 <action android:name="android.intent.action.MAIN"/>
@@ -41,6 +37,10 @@
 				<data android:scheme="https" android:host="app.entel.cl" android:pathPrefix="/Hogar" />
 			</intent-filter>
 		</config-file>
+
+		<edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
+			<application android:usesCleartextTraffic="true" />
+		</edit-config>		
 
 		<source-file src="src/android/io/ionic/links/IonicDeeplink.java" target-dir="src/io/ionic/deeplink" />
 	</platform>
