@@ -39,9 +39,10 @@
 			</intent-filter>
 		</config-file>
 		
-		<edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
-		  <application android:usesCleartextTraffic="true" />
-		</edit-config>		
+    <edit-config target="AndroidManifest.xml" parent="/manifest/application" mode="merge">
+         <application android:usesCleartextTraffic="true" >
+         </application>
+    </edit-config>
 
 		<source-file src="src/android/io/ionic/links/IonicDeeplink.java" target-dir="src/io/ionic/deeplink" />
 	</platform>
