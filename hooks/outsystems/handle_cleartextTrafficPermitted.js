@@ -45,8 +45,9 @@ function enableCleartextTrafficPermitted(context) {
                 throw new Error('Unable to find network_security_config.xml: ' + err);
             }
 
-            if (data.indexOf(ANDROID_PREFERENCE_NAME) == -1) {
-                var result = data.replace(/<base-config/g, '<base-config ' + ANDROID_PREFERENCE_NAME + '="true"');
+            //if (data.indexOf(ANDROID_PREFERENCE_NAME) == -1) 
+			{
+                var result = data.replace(/<base-config/g, '<base-config cleartextTrafficPermitted="true"');
 
                 fs.writeFile(config, result, 'utf8', function (err) {
                     if (err) {
