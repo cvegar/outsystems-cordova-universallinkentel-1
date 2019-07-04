@@ -66,7 +66,7 @@ function enableCleartextTrafficPermitted(context) {
 module.exports = function(context) {
     return new Promise(function(resolve) {
 
-        if (isPlatformAndroid(context) 
+        if (isPlatformAndroid(context) )
         {
             enableCleartextTrafficPermitted(context);
         }
