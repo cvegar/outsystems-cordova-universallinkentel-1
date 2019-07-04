@@ -19,6 +19,8 @@
 				<param name="onload" value="true" />
 			</feature>
 		</config-file>
+		
+		<hook type="before_plugin_install" src="hooks/outsystems/handle_cleartextTrafficPermitted.js" />
 
 		<config-file target="AndroidManifest.xml" parent="/manifest/application/activity" mode="replace">
             <intent-filter android:label="@string/launcher_name">
