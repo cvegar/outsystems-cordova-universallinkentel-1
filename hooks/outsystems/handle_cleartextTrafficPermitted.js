@@ -20,7 +20,8 @@ function isPlatformAndroid(context) {
  * @param {object} context Cordova context
  * @returns {boolean} true if the option should be enabled
  */
-function shouldEnableCleartextTrafficPermitted(context) {
+function shouldEnableCleartextTrafficPermitted(context) 
+{
     var projectRoot = context.opts.projectRoot;
     var configPath = path.join(projectRoot, 'config.xml');
     var config = configXmlParser.getConfig(configPath);
@@ -49,8 +50,10 @@ function enableCleartextTrafficPermitted(context) {
 			{
                 var result = data.replace(/<base-config/g, '<base-config cleartextTrafficPermitted="true"');
 
-                fs.writeFile(config, result, 'utf8', function (err) {
-                    if (err) {
+                fs.writeFile(config, result, 'utf8', function (err) 
+                {
+                    if (err) 
+                    {
                         throw new Error('Unable to write into network_security_config.xml: ' + err);
                     }
                 })
@@ -63,7 +66,8 @@ function enableCleartextTrafficPermitted(context) {
 module.exports = function(context) {
     return new Promise(function(resolve) {
 
-        if (isPlatformAndroid(context) && shouldEnableCleartextTrafficPermitted(context)) {
+        if (isPlatformAndroid(context) 
+        {
             enableCleartextTrafficPermitted(context);
         }
 
