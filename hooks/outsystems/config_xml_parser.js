@@ -1,5 +1,5 @@
 var fs = require('fs');
-var xml2js = require('xml-js');
+var xml2js = require('xml2js');
 
 /**
  * Reads a config.xml file and returns an object with its contents
