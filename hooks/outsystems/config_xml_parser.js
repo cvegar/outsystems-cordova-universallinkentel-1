@@ -1,5 +1,6 @@
 var fs = require('fs');
-var xml2js = require('../../node_modules/xml2js');
+var xml2js = require('xml-js');
+
 /**
  * Reads a config.xml file and returns an object with its contents
  * @param {object} configPath path to a config.xml file
