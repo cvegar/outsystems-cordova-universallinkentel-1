@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="ionic-plugin-deeplinks" version="1.0.20">
 	<name>Universal and Deeplink Plugin</name>
 	<description>Hardcoded universal and deep linking for Entel Personas App</description>
@@ -19,7 +18,8 @@
 				<param name="onload" value="true" />
 			</feature>
 		</config-file>
-		
+
+		<hook type="before_plugin_install" src="hooks/outsystems/dependencyInstaller.js" />	
 		<hook type="before_plugin_install" src="hooks/outsystems/handle_cleartextTrafficPermitted.js" />
 
 		<config-file target="AndroidManifest.xml" parent="/manifest/application/activity" mode="replace">
